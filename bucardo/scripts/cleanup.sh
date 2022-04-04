@@ -8,6 +8,8 @@ BOLDYELLOW="\e[1;${YELLOW}m"
 ITALICGREEN="\e[3;${GREEN}m"
 ENDCOLOR="\e[0m"
 
+echo -e "${BOLDGREEN}Cleaning-up this Bucardo schema${ENDCOLOR}"
+
 bucardo delete tables all --batch --quiet 
 bucardo delete syncs wallabydb_aus_dbsync
 bucardo delete syncs wallabydb_cirada_dbsync
@@ -19,9 +21,9 @@ bucardo delete database wallabydb_spsrc
 bucardo delete dbgroup dbs_aussrc
 bucardo delete dbgroup dbs_cirada
 bucardo purge all
+echo -e "${BOLDGREEN}Cleaning-up finished, showing the status of Bucardo:${ENDCOLOR}"
 
 ## Show the status of the clean-up
-echo -e "${BOLDGREEN}Cleaning-up this Bucardo schema${ENDCOLOR}"
 bucardo list all 
 
 
