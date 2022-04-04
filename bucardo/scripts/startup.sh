@@ -1,4 +1,13 @@
 #!/bin/bash 
+
+RED="31"
+GREEN="32"
+YELLOW="33"
+BOLDGREEN="\e[1;${GREEN}m"
+BOLDYELLOW="\e[1;${YELLOW}m"
+ITALICGREEN="\e[3;${GREEN}m"
+ENDCOLOR="\e[0m"
+
 bucardo add db wallabydb_spsrc dbname=wallabydb user=bucardo port=18020
 bucardo add db wallabydb_aussrc dbname=wallabydb user=bucardo host=146.118.67.204
 bucardo add db wallabydb_cirada dbname=wallabydb user=bucardo host=206.12.93.99
@@ -25,5 +34,5 @@ bucardo add sync wallabydb_aus_dbsync relgroup=aussrctables dbgroup=dbs_aussrc
 bucardo add sync wallabydb_cirada_dbsync relgroup=ciradatables dbgroup=dbs_cirada
 
 ## Show the status of the start-up
-echo "\n--- START UP STATUS ---\n\n"
+echo -e "${BOLDGREEN} - - - Starting a new Bucardo schema - - - ${ENDCOLOR}"
 bucardo list all
