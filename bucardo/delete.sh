@@ -10,4 +10,5 @@ ENDCOLOR="\e[0m"
 
 cd $HOME/bucardo/
 echo -e "${BOLDGREEN}Clean-up latest version of the Bucardo replication data scheme${ENDCOLOR}"
+bash wallaby-data-replication/bucardo/scripts/cleanup.sh
 bucardo restart
