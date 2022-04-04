@@ -9,6 +9,6 @@ bucardo delete database wallabydb_cirada
 bucardo delete database wallabydb_spsrc
 bucardo delete dbgroup dbs_aussrc
 bucardo delete dbgroup dbs_cirada
-bucardo purgue all
+bucardo purge all
 
 
