@@ -34,5 +34,5 @@ bucardo add sync wallabydb_aus_dbsync relgroup=aussrctables dbgroup=dbs_aussrc
 bucardo add sync wallabydb_cirada_dbsync relgroup=ciradatables dbgroup=dbs_cirada
 
 ## Show the status of the start-up
-echo -e "${BOLDGREEN} - - - Starting a new Bucardo schema - - - ${ENDCOLOR}"
+echo -e "${BOLDGREEN}Starting a new Bucardo schema${ENDCOLOR}"
 bucardo list all
