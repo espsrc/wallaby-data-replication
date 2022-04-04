@@ -12,6 +12,7 @@ bucardo delete dbgroup dbs_cirada
 bucardo purge all
 
 ## Show the status of the clean-up
+echo "--- START UP STATUS ---"
 bucardo list all 
 
 
