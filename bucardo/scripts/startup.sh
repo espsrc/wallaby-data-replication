@@ -26,8 +26,22 @@ bucardo add relgroup aussrctables         \
                 wallaby.tag_detection     \
                 wallaby.tag_source_detection
 
-bucardo add sequence seq_wallabydb_aussrc db=wallabydb_aussrc
-bucardo add sequence seq_wallabydb_cirada db=wallabydb_cirada 
+bucardo add sequence wallaby.comment_id_seq  \
+                     wallaby.detection_id_seq  \
+                     wallaby.instance_id_seq  \
+                     wallaby.observation_id_seq  \
+                     wallaby.product_id_seq  \
+                     wallaby.run_id_seq  \
+                     wallaby.run_metadata_id_seq \
+                     wallaby.source_detection_id_seq \
+                     wallaby.source_id_seq \
+                     wallaby.tag_detection_id_seq \
+                     wallaby.tag_id_seq \
+                     wallaby.tag_source_detection_id_seq \
+                     db=wallabydb_aussrc
+
+bucardo add sequence wallaby.kinematic_model_id_seq \
+                     db=wallabydb_cirada 
 
 bucardo add relgroup ciradatables wallaby.kinematic_model
 
