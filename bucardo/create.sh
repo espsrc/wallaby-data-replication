@@ -14,6 +14,6 @@ echo -e "${BOLDGREEN}Clean-up latest version of the Bucardo replication data sch
 bash wallaby-data-replication/bucardo/scripts/cleanup.sh
 echo -e "${BOLDGREEN}Starting up latest version of the Bucardo replication data scheme${ENDCOLOR}"
 bash wallaby-data-replication/bucardo/scripts/startup.sh
-bucardo update sync wallabydb_aus_dbsync onetimecopy=2
-bucardo update sync wallabydb_cirada_dbsync onetimecopy=2
+#bucardo update sync wallabydb_aus_dbsync onetimecopy=2
+#bucardo update sync wallabydb_cirada_dbsync onetimecopy=2
 bucardo start
