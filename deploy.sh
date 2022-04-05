@@ -15,6 +15,7 @@ echo -e "${BOLDGREEN}Creating DB${ENDCOLOR}"
 echo -e "${BOLDGREEN}-------------------------------------------${ENDCOLOR}"
 if [ $1 == "--dev" ]; then bash wallaby-data-replication/db/create-dev.sh; fi
 if [ $1 == "" ]; then      bash wallaby-data-replication/db/create.sh; fi
+sleep 2
 echo -e "${BOLDGREEN}Creating BUCARDO SYNC${ENDCOLOR}"
 echo -e "${BOLDGREEN}-------------------------------------------${ENDCOLOR}"
 bash wallaby-data-replication/bucardo/delete.sh
