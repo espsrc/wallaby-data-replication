@@ -53,7 +53,7 @@ bucardo add dbgroup dbs_cirada wallabydb_cirada:source wallabydb_spsrc:target
 bucardo add sync wallabydb_aus_dbsync relgroup=aussrctables dbgroup=dbs_aussrc
 bucardo add sync wallabydb_cirada_dbsync relgroup=ciradatables dbgroup=dbs_cirada
 bucardo add sync wallabydb_sequences_aussrc relgroup=seq_aussrc dbgroup=dbs_aussrc
-bucardo add sync wallabydb_sequences_cirada relgroup=seq_ciradac dbgroup=dbs_cirada
+bucardo add sync wallabydb_sequences_cirada relgroup=seq_cirada dbgroup=dbs_cirada
 
 echo -e "${BOLDGREEN}Created a new Bucardo schema, showing the status of bucardo:${ENDCOLOR}"
 ## Show the status of the start-up
