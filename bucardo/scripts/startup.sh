@@ -15,30 +15,21 @@ bucardo add db wallabydb_aussrc dbname=wallabydb user=bucardo host=146.118.67.20
 bucardo add db wallabydb_cirada dbname=wallabydb user=bucardo host=206.12.93.99
 bucardo add relgroup aussrctables         \
                 wallaby.comment           \
-                wallaby.comment_id_seq    \
                 wallaby.detection         \
-                wallaby.detection_id_seq  \
                 wallaby.instance          \
-                wallaby.instance_id_seq   \
                 wallaby.product           \
-                wallaby.product_id_seq    \
                 wallaby.run               \
-                wallaby.run_id_seq        \
                 wallaby.run_metadata      \
-                wallaby.run_metadata_id_seq  \
                 wallaby.source            \
-                wallaby.source_id_seq     \
                 wallaby.source_detection  \
-                wallaby.source_detection_id_seq  \
                 wallaby.tag               \
-                wallaby.tag_id_seq        \
                 wallaby.tag_detection     \
-                wallaby.tag_detection_id_seq   \
                 wallaby.tag_source_detection
-                wallaby.tag_source_detection_id_seq
 
-bucardo add relgroup ciradatables wallaby.kinematic_model \
-                                  wallaby.kinematic_model_id_seq
+bucardo add sequences seq_wallabydb_aussrc wallabydb_aussrc
+bucardo add sequences seq_wallabydb_cirada wallabydb_cirada 
+
+bucardo add relgroup ciradatables wallaby.kinematic_model
 
 bucardo add dbgroup dbs_aussrc wallabydb_aussrc:source wallabydb_spsrc:target
 bucardo add dbgroup dbs_cirada wallabydb_cirada:source wallabydb_spsrc:target
