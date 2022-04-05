@@ -40,11 +40,12 @@ bucardo add sequence wallaby.comment_id_seq  \
                      wallaby.source_id_seq \
                      wallaby.tag_detection_id_seq \
                      wallaby.tag_id_seq \
+                     wallaby.kinematic_model_id_seq \
                      wallaby.tag_source_detection_id_seq \
                      db=wallabydb_aussrc relgroup=aussrctables
 
-bucardo add sequence wallaby.kinematic_model_id_seq \
-                     db=wallabydb_cirada relgroup=ciradatables
+#bucardo add sequence wallaby.kinematic_model_id_seq \
+#                     db=wallabydb_cirada relgroup=ciradatables
 
 bucardo add dbgroup dbs_aussrc wallabydb_aussrc:source wallabydb_spsrc:target
 bucardo add dbgroup dbs_cirada wallabydb_cirada:source wallabydb_spsrc:target
