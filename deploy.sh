@@ -13,10 +13,10 @@ cd $HOME/bucardo/
 # Creating (wipe-out db and re-create db) WALLABYDB
 echo -e "${BOLDGREEN}Creating DB${ENDCOLOR}"
 echo -e "${BOLDGREEN}-------------------------------------------${ENDCOLOR}"
-bash db/create.sh
+bash wallaby-data-replication/db/create.sh
 echo -e "${BOLDGREEN}Creating BUCARDO SYNC${ENDCOLOR}"
 echo -e "${BOLDGREEN}-------------------------------------------${ENDCOLOR}"
-bash bucardo/delete.sh
-bash bucardo/create.sh
+bash wallaby-data-replication/bucardo/delete.sh
+bash wallaby-data-replication/bucardo/create.sh
 
 
