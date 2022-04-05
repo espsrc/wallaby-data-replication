@@ -11,6 +11,7 @@ ENDCOLOR="\e[0m"
 echo -e "${BOLDGREEN}Cleaning-up this Bucardo schema${ENDCOLOR}"
 
 bucardo delete tables all --batch --quiet 
+bucardo delete sequences all --batch --quiet
 bucardo delete syncs wallabydb_aus_dbsync
 bucardo delete syncs wallabydb_cirada_dbsync
 bucardo delete relgroups aussrctables
