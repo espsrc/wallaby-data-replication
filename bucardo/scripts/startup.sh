@@ -42,7 +42,7 @@ bucardo add sequence wallaby.comment_id_seq  \
                      wallaby.tag_id_seq \
                      wallaby.kinematic_model_id_seq \
                      wallaby.tag_source_detection_id_seq \
-                     db=wallabydb_aussrc 
+                     db=wallabydb_spsrc relgroup=spsrctables
 
 #bucardo add sequence wallaby.kinematic_model_id_seq \
 #                     db=wallabydb_cirada relgroup=ciradatables
