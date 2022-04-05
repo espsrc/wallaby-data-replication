@@ -19,7 +19,7 @@ bucardo add relgroup aussrctables         \
                 wallaby.detection         \
                 wallaby.detection_id_seq  \
                 wallaby.instance          \
-                wallaby.instance_id_seq   \                
+                wallaby.instance_id_seq   \
                 wallaby.product           \
                 wallaby.product_id_seq    \
                 wallaby.run               \
