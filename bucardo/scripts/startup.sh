@@ -42,16 +42,19 @@ bucardo add sequence wallaby.comment_id_seq  \
                      wallaby.tag_id_seq \
                      wallaby.kinematic_model_id_seq \
                      wallaby.tag_source_detection_id_seq \
-                     db=wallabydb_spsrc relgroup=spsrctables
+                     db=wallabydb_spsrc relgroup=seq_aussrc
 
-#bucardo add sequence wallaby.kinematic_model_id_seq \
-#                     db=wallabydb_cirada relgroup=ciradatables
+bucardo add sequence wallaby.kinematic_model_id_seq \
+                     db=wallabydb_spsrc relgroup=seq_cirada
 
 bucardo add dbgroup dbs_aussrc wallabydb_aussrc:source wallabydb_spsrc:target
 bucardo add dbgroup dbs_cirada wallabydb_cirada:source wallabydb_spsrc:target
 
 bucardo add sync wallabydb_aus_dbsync relgroup=aussrctables dbgroup=dbs_aussrc
 bucardo add sync wallabydb_cirada_dbsync relgroup=ciradatables dbgroup=dbs_cirada
+bucardo add sync wallabydb_sequences_aussrc relgroup=seq_aussrc dbgroup=dbs_aussrc
+bucardo add sync wallabydb_sequences_cirada relgroup=seq_ciradac dbgroup=dbs_cirada
+
 echo -e "${BOLDGREEN}Created a new Bucardo schema, showing the status of bucardo:${ENDCOLOR}"
 ## Show the status of the start-up
 
