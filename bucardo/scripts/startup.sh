@@ -14,8 +14,7 @@ bucardo add db wallabydb_spsrc dbname=wallabydb user=bucardo port=18020
 bucardo add db wallabydb_aussrc dbname=wallabydb user=bucardo host=146.118.67.204
 #bucardo add db wallabydb_cirada dbname=wallabydb user=bucardo host=206.12.93.99
 
-bucardo add relgroup aussrctables         \                
-                wallaby.run
+bucardo add relgroup aussrctables  wallaby.run
 
 # bucardo add sequence wallaby.comment_id_seq  \
 #                      wallaby.detection_id_seq  \
