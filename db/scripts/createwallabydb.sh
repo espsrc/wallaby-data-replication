@@ -1,12 +1,6 @@
 #!/bin/bash
 
-RED="31"
-GREEN="32"
-YELLOW="33"
-BOLDGREEN="\e[1;${GREEN}m"
-BOLDYELLOW="\e[1;${YELLOW}m"
-ITALICGREEN="\e[3;${GREEN}m"
-ENDCOLOR="\e[0m"
+source ../source/shell.sh
 
 echo -e "${BOLDYELLOW}Cloning WALLABY database repository${ENDCOLOR}"
 sudo su - postgres -c "rm -rf WALLABY_database"
