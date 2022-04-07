@@ -1,21 +1,38 @@
 #!/bin/bash
 
-RED="31"
-GREEN="32"
-YELLOW="33"
-BOLDGREEN="\e[1;${GREEN}m"
-BOLDYELLOW="\e[1;${YELLOW}m"
-ITALICGREEN="\e[3;${GREEN}m"
-ENDCOLOR="\e[0m"
+source ../source/shell.sh
 
-cd $HOME/bucardo/
+
+echo -e "${BOLDGREEN}${ENDCOLOR}"
+echo -e "${BOLDGREEN}----------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}Stopping Bucardo${ENDCOLOR}"
+echo -e "${BOLDGREEN}----------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}${ENDCOLOR}"
+
 bucardo stop
-echo -e "${BOLDGREEN}Clean-up latest version of the Bucardo replication data scheme${ENDCOLOR}"
+
+echo -e "${BOLDGREEN}${ENDCOLOR}"
+echo -e "${BOLDGREEN}------------------------------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}Cleaning and starting Bucardo Schema${ENDCOLOR}"
+echo -e "${BOLDGREEN}------------------------------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}${ENDCOLOR}"
+
 bash wallaby-data-replication/bucardo/scripts/cleanup.sh
-echo -e "${BOLDGREEN}Starting up latest version of the Bucardo replication data scheme${ENDCOLOR}"
 bash wallaby-data-replication/bucardo/scripts/startup.sh
-bucardo update sync wallabydb_aus_dbsync onetimecopy=1
-bucardo update sync wallabydb_cirada_dbsync onetimecopy=1
-bucardo update sync wallabydb_sequences_aussrc onetimecopy=1
-bucardo update sync wallabydb_sequences_cirada onetimecopy=1
+
+echo -e "${BOLDGREEN}${ENDCOLOR}"
+echo -e "${BOLDGREEN}------------------------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}Showing created Bucardo Schema${ENDCOLOR}"
+echo -e "${BOLDGREEN}------------------------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}${ENDCOLOR}"
+
+bucardo list all
+
+echo -e "${BOLDGREEN}${ENDCOLOR}"
+echo -e "${BOLDGREEN}---------------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}Starting Bucardo Sync${ENDCOLOR}"
+echo -e "${BOLDGREEN}---------------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}${ENDCOLOR}"
+
 bucardo start
+
