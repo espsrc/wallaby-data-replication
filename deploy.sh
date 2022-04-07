@@ -2,9 +2,9 @@
 source ../source/shell.sh
 
 echo -e "${BOLDGREEN}${ENDCOLOR}"
-echo -e "${BOLDGREEN}----------------------------${ENDCOLOR}"
-echo -e "${BOLDGREEN}Creating PostgreSQL DataBase${ENDCOLOR}"
-echo -e "${BOLDGREEN}----------------------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}--------------------------------------${ENDCOLOR}"
+echo -e "${BOLDGREEN}Creating WALLABY (PostgreSQL) Database${ENDCOLOR}"
+echo -e "${BOLDGREEN}--------------------------------------${ENDCOLOR}"
 echo -e "${BOLDGREEN}${ENDCOLOR}"
 
 # Using dev from a repository forked with corrections applied

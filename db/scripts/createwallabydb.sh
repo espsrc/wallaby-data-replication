@@ -1,5 +1,4 @@
 #!/bin/bash
-
 source ../source/shell.sh
 
 echo -e "${BOLDYELLOW}Cloning WALLABY database repository${ENDCOLOR}"
